@@ -1,0 +1,84 @@
+/* Write your CSS here */
+/* index.css */
+
+/* Base styles */
+.prime-video-container {
+  background-color: #000000;
+  min-height: 100vh;
+  padding-bottom: 32px;
+}
+
+.image {
+  width: 100%;
+}
+
+.movies-container {
+  padding: 20px 40px;
+}
+
+.movies-heading {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+/* Tablet devices (768px and up) */
+@media screen and (min-width: 768px) {
+  .movies-container {
+    padding: 30px 60px;
+  }
+
+  .movies-heading {
+    font-size: 28px;
+    margin-bottom: 25px;
+    margin-top: 40px;
+  }
+}
+
+/* Desktop devices (992px and up) */
+@media screen and (min-width: 992px) {
+  .movies-container {
+    padding: 40px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .movies-heading {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Small mobile devices (up to 480px) */
+@media screen and (max-width: 480px) {
+  .movies-container {
+    padding: 15px 20px;
+  }
+
+  .movies-heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+}
+
+/* Landscape mode for mobile */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .movies-heading {
+    font-size: 22px;
+  }
+  
+  .movies-container {
+    padding: 20px 30px;
+  }
+}
+
+/* Very large screens */
+@media screen and (min-width: 1440px) {
+  .movies-container {
+    max-width: 1400px;
+  }
+}

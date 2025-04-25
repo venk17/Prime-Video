@@ -1,0 +1,136 @@
+/* Write your CSS here */
+/* index.css */
+
+/* Base styles for all devices */
+.thumbnail {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+  width: 90% !important;
+  max-width: 800px;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.modal-container {
+  position: relative;
+  background: #000;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.movie-player-container {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.movie-player-container > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Tablet devices (768px and up) */
+@media screen and (min-width: 768px) {
+  .thumbnail {
+    max-width: 300px;
+  }
+
+  .popup-content {
+    padding: 30px;
+  }
+
+  .modal-container {
+    padding: 30px;
+  }
+
+  .close-button {
+    top: 15px;
+    right: 15px;
+    padding: 10px;
+  }
+}
+
+/* Desktop devices (992px and up) */
+@media screen and (min-width: 992px) {
+  .thumbnail {
+    max-width: 350px;
+  }
+
+  .popup-content {
+    width: 80% !important;
+  }
+}
+
+/* Large desktop devices (1200px and up) */
+@media screen and (min-width: 1200px) {
+  .thumbnail {
+    max-width: 400px;
+  }
+
+  .popup-content {
+    width: 70% !important;
+    max-width: 1000px;
+  }
+}
+
+/* Mobile devices (landscape) */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .movie-player-container {
+    padding-top: 75%; /* Adjust aspect ratio for landscape */
+  }
+}
+
+/* Very small mobile devices */
+@media screen and (max-width: 480px) {
+  .popup-content {
+    width: 95% !important;
+    padding: 10px;
+  }
+
+  .modal-container {
+    padding: 15px;
+  }
+
+  .close-button {
+    top: 5px;
+    right: 5px;
+    padding: 6px;
+  }
+}

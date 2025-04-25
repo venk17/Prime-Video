@@ -1,0 +1,103 @@
+/* Add this to your CSS file or in a style tag */
+
+/* Base slider styles */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: 0 30px; /* Add padding for arrows */
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 20px 0; /* Add vertical padding */
+}
+
+.slick-track {
+  display: flex;
+  align-items: center; /* Center slides vertically */
+}
+
+.slick-slide {
+  padding: 0 10px; /* Space between slides */
+  box-sizing: border-box;
+}
+
+/* Navigation arrows */
+.slick-prev,
+.slick-next {
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px;
+  color: white;
+}
+
+/* Responsive settings */
+@media screen and (max-width: 767px) {
+  .slick-slider {
+    padding: 0 20px;
+  }
+
+  .slick-slide {
+    padding: 0 5px;
+  }
+
+  /* Show 2 slides on mobile */
+  .slick-slider .slick-list .slick-track {
+    transform: translate3d(0, 0, 0) !important;
+    width: 100% !important;
+  }
+
+  .slick-slide {
+    width: 50% !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Show 3 slides on tablet */
+  .slick-slide {
+    width: 33.33% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Show 4 slides on desktop (default) */
+  .slick-slide {
+    width: 25% !important;
+  }
+}
+
+/* Adjust arrow position on smaller screens */
+@media screen and (max-width: 480px) {
+  .slick-prev {
+    left: 5px;
+  }
+
+  .slick-next {
+    right: 5px;
+  }
+}
